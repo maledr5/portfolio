@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/48938155eb24b4ccdde09426066869504c6dab3c/dist/css/bootstrap.min.css">
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link href="style/normalize.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link href="style/styles.css" rel="stylesheet" type="text/css">
+
+	<link 
+		href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto+Condensed:400,700|Roboto+Slab:400,700|Roboto:400,400i,500i" 
+		rel="stylesheet"
+	>
+
+	<script type="text/javascript" src="lib/jquery.mixitup.min.js"></script>
+	
+	<script type="text/javascript">
+	$(function () {
+		var filterList = {
+			init: function () {
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'	
+    		  	},
+    		  	load: {
+      		  		filter: '.branding'  
+      			}});								
+			}
+		};
+		filterList.init();
+	});	
+	</script>
+
   </head>
+
   <body>
+
+    <ul id="filters" class="clearfix">
+		<li><span class="filter active" data-filter=".branding, .ui-design, .graphics, .photography, .programing">All</span></li>
+		<li><span class="filter" data-filter=".branding">Branding</span></li>
+		<li><span class="filter" data-filter=".ui-design">UI Design</span></li>
+		<li><span class="filter" data-filter=".graphics">Graphics</span></li>
+		<li><span class="filter" data-filter=".photography">Photography</span></li>
+		<li><span class="filter" data-filter=".programing">Programming</span></li>
+	</ul>
+    
     <div class="container"></div>
+
   </body>
   <script src="/bundle.js"></script>
 </html>
