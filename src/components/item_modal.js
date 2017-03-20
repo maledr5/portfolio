@@ -20,7 +20,7 @@ const ItemModal = React.createClass({
 				<div className="folio-small-box">
 				     <a onClick={this.open}>
 				    	<div className="small-img" >
-				    		<img src={this.props.imgSource}/>
+				    		<img src={this.props.smallImgSource}/>
 				    	</div>
 				    	<div className="separator"></div>
 				    	<div className="description">
@@ -32,12 +32,9 @@ const ItemModal = React.createClass({
 				<div >
 					<Modal className="folio-modal" show={this.state.showModal} onHide={this.close}>
 						<Modal.Body>
-							<a onClick={this.close}>Close</a>
-							<div className="full-size-img" >
+							<div className={this.props.class} >
 			 					<img src={this.props.imgSource}/>
 			 				</div>
-			 				<h3>{this.props.title}</h3>
-			     			<p className="light">{this.props.description}</p>
 						</Modal.Body>
 					</Modal>
 				</div>

@@ -20,9 +20,11 @@ export default class App extends Component {
 				<div className={"portfolio " + item.folioName} data-cat={item.folioName}>
 					<ItemModal 
 						imgSource={item.imgSource}
+						smallImgSource={item.smallImgSource}
 						title={item.title}
 						description={item.description}
 						key={id}
+						class={item.class}
 					/>
 				</div>
 			)
