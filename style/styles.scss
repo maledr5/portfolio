@@ -48,6 +48,8 @@ h3 {
 	font-size: 1.3em;
 	color: $sec-color;
 	font-weight: 200;
+	text-transform: none !important;
+	
 }
 
 h4 {
@@ -86,8 +88,8 @@ a {
 	}
 }
 
-a:hover, a:focus, a:link, a:visited, a:active {
-	text-transform: none;
+a:hover p, a:focus p, a:link p, a:visited p, a:active p{
+	text-transform: none !important;
 }
 
 a.main {
